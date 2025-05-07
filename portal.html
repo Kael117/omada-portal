@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wenzy Wi-Fi Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-black bg-opacity-70">
+  <div class="bg-white bg-opacity-95 p-8 rounded-2xl shadow-2xl w-full max-w-md">
+    <div class="text-center mb-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Wifi_Logo.svg/512px-Wifi_Logo.svg.png" alt="WiFi Logo" class="h-10 mx-auto mb-3">
+      <h1 class="text-2xl font-bold text-gray-800">Welcome to Wenzy Wi-Fi</h1>
+      <p class="text-sm text-gray-500">Enter your voucher to connect</p>
+    </div>
+
+    <form action="/portal-login" method="POST" class="space-y-4">
+      <div>
+        <label for="voucher" class="block text-gray-700 text-sm font-medium mb-1">Voucher Code</label>
+        <input
+          type="text"
+          id="voucher"
+          name="voucher"
+          placeholder="e.g. ABCD-1234"
+          required
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-200"
+      >
+        Connect to Wi-Fi
+      </button>
+    </form>
+
+    <div class="text-xs text-center text-gray-400 mt-6">
+      <a href="/terms" class="hover:underline">Terms of Service</a> |
+      Powered by Omada Controller
+    </div>
+  </div>
+</body>
+</html>
